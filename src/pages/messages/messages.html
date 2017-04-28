@@ -1,0 +1,115 @@
+<ion-header>
+
+	<ion-navbar color="bars">
+		<ion-title>Notifications</ion-title>
+	</ion-navbar>
+
+	<ion-toolbar no-border-top>
+		<ion-segment class="messages-seg" [(ngModel)]="date_list">
+			<ion-segment-button class="messages-seg-button" value="today">
+				Today
+			</ion-segment-button>
+			<ion-segment-button class="messages-seg-button" value="week">
+				Last week
+			</ion-segment-button>
+			<ion-segment-button class="messages-seg-button" value="month">
+				Last month
+			</ion-segment-button>
+			<ion-segment-button class="messages-seg-button" value="all">
+				All
+			</ion-segment-button>
+		</ion-segment>
+	</ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="messages-content" padding>
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content pullingText="Pull to refresh..." refreshingSpinner="bubbles" refreshingText="Refreshing...">
+		</ion-refresher-content>
+	</ion-refresher>
+
+	<div class="messages-box" [ngSwitch]="date_list">
+		<div *ngSwitchCase="'today'">
+			<div *ngIf="count_today_list > 0">
+				<div *ngFor="let notification of today_list">
+					<ion-list class="messages-list">
+						<ion-list-header class="messages-title" (click)="goToInfo(notification.message, notification.date, notification.model, notification.type)"><strong>Car:</strong><br>
+							<span class="messages-car">{{ notification.model }} {{ notification.type }}</span>
+							<div item-right class="messages-label">{{ notification.date }}</div>
+						</ion-list-header>
+					</ion-list>
+				</div>
+			</div>
+			<div *ngIf="count_today_list <= 0">
+				<ion-list class="messages-list">
+					<ion-list-header class="messages-title">
+						<strong>No notifications to show for today</strong>
+					</ion-list-header>
+				</ion-list>
+			</div>
+		</div>
+
+		<div *ngSwitchCase="'week'">
+			<div *ngIf="count_week_list > 0">
+				<div *ngFor="let notification of week_list">
+					<ion-list class="messages-list">
+						<ion-list-header class="messages-title" (click)="goToInfo(notification.message, notification.date, notification.model, notification.type)"><strong>Car:</strong><br>
+							<span class="messages-car">{{ notification.model }} {{ notification.type }}</span>
+							<div item-right class="messages-label">{{ notification.date }}</div>
+						</ion-list-header>
+					</ion-list>
+				</div>
+			</div>
+			<div *ngIf="count_week_list <= 0">
+				<ion-list class="messages-list">
+					<ion-list-header class="messages-title">
+						<strong>No notifications to show in last week</strong>
+					</ion-list-header>
+				</ion-list>
+			</div>
+		</div>
+
+		<div *ngSwitchCase="'month'">
+			<div *ngIf="count_month_list > 0">
+				<div *ngFor="let notification of month_list">
+					<ion-list class="messages-list">
+						<ion-list-header class="messages-title" (click)="goToInfo(notification.message, notification.date, notification.model, notification.type)"><strong>Car:</strong><br>
+							<span class="messages-car">{{ notification.model }} {{ notification.type }}</span>
+							<div item-right class="messages-label">{{ notification.date }}</div>
+						</ion-list-header>
+					</ion-list>
+				</div>
+			</div>
+			<div *ngIf="count_month_list <= 0">
+				<ion-list class="messages-list">
+					<ion-list-header class="messages-title">
+						<strong>No notifications to show in the last month</strong>
+					</ion-list-header>
+				</ion-list>
+			</div>
+		</div>
+
+		<div *ngSwitchCase="'all'">
+			<div *ngIf="count_all_list > 0">
+				<div *ngFor="let notification of all_list">
+					<ion-list class="messages-list">
+						<ion-list-header class="messages-title" (click)="goToInfo(notification.message, notification.date, notification.model, notification.type)"><strong>Car:</strong><br>
+							<span class="messages-car">{{ notification.model }} {{ notification.type }}</span>
+							<div item-right class="messages-label">{{ notification.date }}</div>
+						</ion-list-header>
+					</ion-list>
+				</div>
+			</div>
+			<div *ngIf="count_all_list <= 0">
+				<ion-list class="messages-list">
+					<ion-list-header class="messages-title">
+						<strong>No notifications to show</strong>
+					</ion-list-header>
+				</ion-list>
+			</div>
+		</div>
+	</div>
+
+</ion-content>

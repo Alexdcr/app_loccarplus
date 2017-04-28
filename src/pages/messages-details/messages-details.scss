@@ -1,0 +1,86 @@
+.ios,
+.md {
+	page-messages-details {
+		.details-content {
+			background: #54acc9;
+
+			.details-box {
+				background: #39849d;
+				padding: 10px 15px 0;
+				margin-top: 30px;
+				border-radius: 10px !important;
+			}
+
+			.details-title {
+				color: #ffffff;
+				border: 0;
+				text-transform: none;
+				font-size: 18px;
+				font-weight: bold;
+				background-color: #39849d;
+				border-bottom: 1px solid #ffffff !important;
+				padding-bottom: 4px !important;
+				margin-bottom: 5% !important;
+			}
+
+			.details-date {
+				color: #d9d9d9;
+				text-align: right;
+				border: 0;
+				text-transform: none;
+				font-size: 13px;
+				background-color: #39849d;
+			}
+
+			.details-label {
+				color: #d9d9d9;
+				text-align: justify;
+				border: 0;
+				font-size: 14px;
+				background-color: #39849d;
+				border-bottom: 1px solid #ffffff !important;
+				margin-bottom: 5% !important;
+			}
+
+			ion-row {
+				align-items: center;
+				text-align: center;
+			}
+
+			ion-item {
+				border-radius: 30px !important;
+				padding-left: 30px !important;
+				font-size: 0.9em;
+				margin-bottom: 10px;
+				border: 1px solid #ffffff;
+				border-bottom: 0 !important;
+				box-shadow: none !important;
+			}
+
+			.details-col {
+				margin: 0 16px;
+				padding-bottom: 20px;
+			}
+
+			.item-inner {
+				border-bottom-color: #ffffff !important;
+				border-bottom: 0;
+				box-shadow: none !important;
+			}
+
+			.submit-btn {
+				background: #1e88e5;
+				border-radius: 30px !important;
+				border: 1px solid #ffffff;
+			}
+		}
+
+		p {
+			text-align: right;
+			font-size: 1.0em;
+			color: #d2d2d2;
+			text-decoration-color: #ea6153;
+			text-decoration: underline;
+		}
+	}
+}

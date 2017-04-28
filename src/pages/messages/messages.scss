@@ -1,0 +1,142 @@
+.ios,
+.md {
+	page-messages {
+		.messages-seg-button {
+			background-color: #39849d;
+			color: #ffffff;
+			border-color: #d9d9d9;
+		}
+
+		.messages-seg {
+			background-color: #39849d;
+		}
+
+		.segment-ios .segment-button.segment-activated {
+			background-color: #d9d9d9;
+			color: #39849d;
+			font-weight: bold;
+		}
+
+		.segment-md .segment-button.activated,
+		.segment-md .segment-button.segment-activated {
+			border-color: #39849d;
+			background-color: #d9d9d9;
+			color: #39849d;
+			font-weight: bold;
+		}
+
+		.toolbar-background-md {
+			background-color: #39849d;
+		}
+
+		.list-header-md {
+			margin-bottom: 0 !important;
+			border-bottom: 1px solid #dedede !important;
+		}
+
+		.list-header-ios {
+			border-bottom: 1px solid #dedede !important;
+		}
+
+		.messages-content {
+			background: #d2d2d2;
+
+			.list-title {
+				font-weight: bold;
+				color: #d9d9d9;
+				text-align: right;
+				padding-right: 32px !important;
+				border-bottom: 1px solid #dedede;
+				border-top: 0;
+				background-color: #39849d;
+			}
+
+			.messages-title {
+				color: #ffffff;
+				text-align: left;
+				border: 0;
+				//border-bottom: 1px solid #dedede !important;
+				text-transform: none;
+				font-size: 15px;
+				background-color: #39849d;
+			}
+
+			.messages-car {
+				color: #d9d9d9;
+				text-align: left;
+				border: 0;
+				text-transform: none;
+				font-size: 14px;
+				background-color: #39849d;
+			}
+
+			.messages-label {
+				color: #d9d9d9;
+				text-align: right;
+				border: 0;
+				font-size: 12px;
+				background-color: #39849d;
+			}
+
+			.messages-box {
+				background: #39849d;
+				padding: 10px 15px;
+				margin-top: 10px;
+				border-radius: 10px !important;
+				color: #d2d2d2;
+
+				ion-list {
+					margin-bottom: 0;
+				}
+			}
+
+			ion-row {
+				align-items: center;
+				text-align: center;
+			}
+
+			ion-item {
+				border-radius: 30px !important;
+				padding-left: 30px !important;
+				font-size: 0.9em;
+				margin-bottom: 10px;
+				border: 1px solid #ffffff;
+				border-bottom: 0 !important;
+				box-shadow: none !important;
+			}
+
+			.car-item,
+			button.item {
+				padding-left: 30px !important;
+				background-color: #39849d;
+				color: #ffffff;
+				border-bottom: 0 !important;
+			}
+
+			.security-list {
+				margin-top: 14%;
+			}
+
+			.signout-col {
+				margin: 0 16px;
+				padding-bottom: 20px;
+			}
+
+			.item-inner {
+				border-bottom-color: #ffffff !important;
+				border-bottom: 0;
+				box-shadow: none !important;
+			}
+
+			.signout-btn {
+				background: #f53d3d;
+				border-radius: 30px !important;
+				border: 1px solid #ffffff;
+			}
+
+			.signout-div {
+				margin-top: 8%;
+			}
+		}
+	}
+}
